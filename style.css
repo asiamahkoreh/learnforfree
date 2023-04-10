@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    --headingColor: #000;
+    --textColor: #161212;
+    --fontSize: 20px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 2fr;
+    color: var(--textColor);
+}
+
+header {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 10px;
+    font-size: var(--fontSize);
+    text-transform: capitalize;
+}
+
+header ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+h1, h2 {
+    text-transform: capitalize;
+}
+
+.reading {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.intro {
+    padding: 20px 0;
+}
+
+.content {
+    margin-bottom: 10px;
+}
+
+.reading img {
+    width: 600px;
+    height: 300px;
+    margin-top: 10px;
+}
+
+
+/* page 2 styling */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset {
+    padding: 20px 30px;
+    min-width: 400px;
+    min-height: 400px;
+    text-transform: capitalize;
+}
+
+label {
+    display: block;
+    padding: 6px 0;
+}
+
+input[type=text] {
+    padding: 6px;
+}
+/* .familiar and .checkit styles the checkbox */
+form p {
+    margin-top: 5px;
+}
+.familiar {
+    display: flex;
+}
+
+.checkit {
+    display: flex;
+    padding-right: 10px;
+}
+
+.checkit input {
+    padding-left: 10px;
+}
+
+button {
+    padding: 6px 14px;
+    font-size: var(--fontSize);
+
+}
