@@ -1,9 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     --headingColor: #000;
     --textColor: #161212;
     --fontSize: 20px;
+    --lineHeight: 1.4;
+    --headerColor: #cec9c9;
 }
 
 body {
@@ -16,6 +19,7 @@ body {
 header {
     grid-column: 1 / 4;
     grid-row: 1 / 2;
+    background-color: var(--headerColor);
 }
 
 header ul {
@@ -25,10 +29,15 @@ header ul {
     padding: 20px 10px;
     font-size: var(--fontSize);
     text-transform: capitalize;
+
 }
 
 header ul li {
     list-style-type: none;
+}
+
+.navbar a:hover {
+    margin-bottom: 1px solid black;
 }
 
 a {
@@ -47,10 +56,13 @@ h1, h2 {
 
 .intro {
     padding: 20px 0;
+    text-align: center;
+    margin: 10px;
 }
 
 .content {
     margin-bottom: 10px;
+    line-height: var(--lineHeight);
 }
 
 .reading img {
@@ -59,12 +71,17 @@ h1, h2 {
     margin-top: 10px;
 }
 
+.free {
+    color: red;
+}
+
 
 /* page 2 styling */
 form {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 fieldset {
@@ -103,4 +120,49 @@ button {
     padding: 6px 14px;
     font-size: var(--fontSize);
 
+}
+
+/* styling learn / free websites page  */
+
+.top-5 ul {
+    display: flex;
+    flex-direction: column;
+    line-height: var(--lineHeight);
+    text-transform: capitalize;
+    font-size: var(--fontSize);
+
+}
+
+.top-5 a::before  {
+    content: '- ';
+}
+
+.top-5 a:hover {
+    border-bottom: 1px solid black;
+}
+
+.learn-image {
+    min-height: 400px;
+}
+
+
+/* styling about page  */
+
+.about-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.website-image {
+    border: 2px solid black;
+}
+
+.about-images figcaption {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: var(--fontSize);
 }
